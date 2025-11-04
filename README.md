@@ -54,8 +54,9 @@ dataset/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/CatDogVision-Lite.git
-   cd CatDogVision-Lite
+   git clone https://github.com/GautamSutar/Convolutional-Neural-Network--CatDogVision
+   cd Convolutional-Neural-Network--CatDogVision
+
    ```
 
 2. Install the required dependencies:
