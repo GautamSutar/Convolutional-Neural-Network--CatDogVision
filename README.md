@@ -122,14 +122,18 @@ or
 ### 🧩 Model Summary
 
 ```python
-cnn = tf.keras.models.Sequential()
-cnn.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu', input_shape=[64, 64, 3]))
-cnn.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))
-cnn.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu'))
-cnn.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))
-cnn.add(tf.keras.layers.Flatten())
-cnn.add(tf.keras.layers.Dense(units=128, activation='relu'))
-cnn.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
+from tensorflow.keras import layers, models   
+
+cnn = models.Sequential([
+    layers.Input(shape=[64, 64, 3]),
+    layers.Conv2D(filters=32, kernel_size=3, activation='relu'),
+    layers.MaxPooling2D(pool_size=2, strides=2),
+    layers.Conv2D(filters=32, kernel_size=3, activation='relu'),
+    layers.MaxPooling2D(pool_size=2, strides=2),
+    layers.Flatten(),
+    layers.Dense(units=128, activation='relu'),
+    layers.Dense(units=1, activation='sigmoid')
+])  
 ```
 
 ### 🧮 Compilation and Training
