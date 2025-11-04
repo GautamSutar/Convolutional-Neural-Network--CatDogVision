@@ -84,21 +84,6 @@ This will:
 * Display training and validation accuracy per epoch
 
 ---
-
-### **2. Predict a New Image**
-
-Once training is complete, test the model on a new image:
-
-```python
-python predict.py
-```
-
-Make sure your image is located at:
-
-```
-dataset/single_prediction/cat_or_dog_1.jpg
-```
-
 ---
 
 ## 💡 **Expected Output**
